@@ -8,8 +8,12 @@ contract  HelloHedera is Pausable, Ownable  {
 
     event SetMessage(string message);
     string private message;
+    constructor(
+        address initialOwner
+    ) Ownable(initialOwner) {
 
-   
+        message = "Hello, Hedera!";
+    }
 
     function getMessage() public view returns (string memory) {
         return message;
