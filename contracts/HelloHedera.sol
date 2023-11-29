@@ -32,5 +32,4 @@ contract  HelloHedera is Pausable, Ownable  {
     function unpause() public onlyOwner {
         _unpause();
     }
-
 }
